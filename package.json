@@ -1,0 +1,69 @@
+{
+  "name": "code-explainer-fresh",
+  "displayName": "Code Explainer Fresh",
+  "description": "AI-Powered code explanation",
+  "version": "0.0.1",
+  "publisher": "ali.imran",
+  "engines": {
+    "vscode": "^1.124.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "code-explainer-fresh.explainSelection",
+        "title": "Explain Selected Code"
+      },
+      {
+        "command": "code-explainer-fresh.setApiKey",
+        "title": "Code Explainer: Set Groq API Key"
+      }
+    ],
+    "menus": {
+      "editor/context": [
+        {
+          "command": "code-explainer-fresh.explainSelection",
+          "group": "navigation"
+        }
+      ]
+    },
+    "keybindings": [
+      {
+        "command": "code-explainer-fresh.explainSelection",
+        "key": "ctrl+alt+e",
+        "when": "editorTextFocus"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.10",
+    "@types/node": "24.x",
+    "@types/sanitize-html": "^2.16.2",
+    "@types/vscode": "^1.124.0",
+    "@vscode/test-cli": "^0.0.15",
+    "@vscode/test-electron": "^3.0.0",
+    "eslint": "^10.5.0",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.61.1"
+  },
+  "overrides": {
+    "diff": "^8.0.4",
+    "serialize-javascript": "^7.0.6"
+  },
+  "dependencies": {
+    "marked": "^18.1.3",
+    "sanitize-html": "^2.18.1"
+  }
+}
