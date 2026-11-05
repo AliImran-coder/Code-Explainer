@@ -3,7 +3,7 @@
   "displayName": "Code Explainer Fresh",
   "description": "AI-Powered code explanation",
   "version": "0.0.1",
-  "publisher": "ali.imran",
+  "publisher": "AliImranDev",
   "engines": {
     "vscode": "^1.124.0"
   },
