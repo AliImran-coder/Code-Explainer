@@ -5,6 +5,10 @@
   "version": "0.0.2",
   "publisher": "AliImranDev",
   "icon": "icon.png",
+  "repository": {
+  "type": "git",
+  "url": "https://github.com/AliImran-coder/Code-Explainer.git"
+},
   "engines": {
     "vscode": "^1.124.0"
   },
